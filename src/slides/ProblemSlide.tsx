@@ -8,7 +8,7 @@ const cards = [
 
 export default function ProblemSlide() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-full min-h-0 overflow-hidden overflow-y-auto overscroll-contain bg-black">
       <video
         autoPlay
         loop
@@ -18,7 +18,7 @@ export default function ProblemSlide() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260503_104800_bc43ae09-f494-43e3-97d7-2f8c1692cfd7.mp4"
       />
       <div className="absolute inset-0 bg-black/20" />
-      <div className="relative z-10 h-full flex px-10 lg:px-20 py-12 pb-20">
+      <div className="relative z-10 min-h-full flex px-4 sm:px-8 lg:px-20 py-8 sm:py-12 pb-24 sm:pb-20">
         <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16 w-full my-auto">
           <div className="flex-1">
             <motion.span
@@ -33,7 +33,7 @@ export default function ProblemSlide() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.7 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-8"
+              className="text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-6 sm:mb-8"
             >
               Web Developers and Designers
             </motion.h2>
@@ -67,7 +67,7 @@ export default function ProblemSlide() {
                   </div>
                   <h3 className="text-2xl font-body font-semibold text-white">{c.title}</h3>
                 </div>
-                <p className="text-lg font-body font-normal text-white/90 leading-relaxed pl-16">
+                <p className="text-base sm:text-lg font-body font-normal text-white/90 leading-relaxed pl-0 sm:pl-16">
                   {c.desc}
                 </p>
               </motion.div>

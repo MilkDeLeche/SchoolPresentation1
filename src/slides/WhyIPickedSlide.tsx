@@ -21,7 +21,7 @@ const reasons = [
 
 export default function WhyIPickedSlide() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-full min-h-0 overflow-hidden overflow-y-auto overscroll-contain bg-black">
       <video
         autoPlay
         loop
@@ -31,7 +31,7 @@ export default function WhyIPickedSlide() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />
-      <div className="relative z-10 h-full flex flex-col px-10 lg:px-20 py-12 pb-24">
+      <div className="relative z-10 min-h-full flex flex-col px-4 sm:px-8 lg:px-20 py-8 sm:py-12 pb-28 sm:pb-24">
         <motion.span
           initial={{ opacity: 0, x: -15 }}
           animate={{ opacity: 1, x: 0 }}
@@ -77,10 +77,12 @@ export default function WhyIPickedSlide() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.6 }}
-          className="flex justify-between border-t border-white/25 pt-4 mt-6"
+          className="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center border-t border-white/25 pt-4 mt-6"
         >
-          <span className="text-white/60 text-base font-body">Miguel Angel Sanchez — Career Presentation</span>
-          <span className="text-white/40 text-base font-body">8 / 8</span>
+          <span className="text-white/60 text-sm sm:text-base font-body break-words">
+            Miguel Angel Sanchez — Career Presentation
+          </span>
+          <span className="text-white/40 text-sm sm:text-base font-body shrink-0">8 / 8</span>
         </motion.div>
       </div>
     </div>

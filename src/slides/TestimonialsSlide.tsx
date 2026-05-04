@@ -23,7 +23,7 @@ const salaryCards = [
 
 export default function TestimonialsSlide() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-full min-h-0 overflow-hidden overflow-y-auto overscroll-contain bg-black">
       <video
         autoPlay
         loop
@@ -33,7 +33,7 @@ export default function TestimonialsSlide() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260421_102157_ad7d8fd0-1039-4516-8d40-db76927cc9c5.mp4"
       />
       <div className="absolute inset-0 bg-black/20" />
-      <div className="relative z-10 h-full flex flex-col px-10 lg:px-20 py-12 pb-20">
+      <div className="relative z-10 min-h-full flex flex-col px-4 sm:px-8 lg:px-20 py-8 sm:py-12 pb-24 sm:pb-20">
         <motion.span
           initial={{ opacity: 0, x: -15 }}
           animate={{ opacity: 1, x: 0 }}
@@ -64,7 +64,7 @@ export default function TestimonialsSlide() {
                 <span className="text-white/80 font-body text-base tracking-[0.2em] uppercase block mb-4">
                   {s.label}
                 </span>
-                <p className="text-5xl lg:text-6xl font-heading italic text-white leading-none mb-5">
+                <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading italic text-white leading-none mb-4 sm:mb-5 break-words">
                   {s.range}
                 </p>
                 <p className="text-white/90 font-body font-normal text-lg leading-relaxed">

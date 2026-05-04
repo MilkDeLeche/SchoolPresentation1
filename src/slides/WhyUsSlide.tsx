@@ -9,7 +9,7 @@ const cards = [
 
 export default function WhyUsSlide() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-full min-h-0 overflow-hidden overflow-y-auto overscroll-contain bg-black">
       <video
         autoPlay
         loop
@@ -19,7 +19,7 @@ export default function WhyUsSlide() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_212252_7d25a6d2-cf7f-465c-9bd1-a1496112806e.mp4"
       />
       <div className="absolute inset-0 bg-black/15" />
-      <div className="relative z-10 h-full flex flex-col px-10 lg:px-20 py-12 pb-20">
+      <div className="relative z-10 min-h-full flex flex-col px-4 sm:px-8 lg:px-20 py-8 sm:py-12 pb-24 sm:pb-20">
         <motion.span
           initial={{ opacity: 0, x: -15 }}
           animate={{ opacity: 1, x: 0 }}
@@ -32,7 +32,7 @@ export default function WhyUsSlide() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-heading italic text-white tracking-tight leading-[0.85] mb-6 lg:mb-auto"
+          className="text-[2.75rem] sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-heading italic text-white tracking-tight leading-[0.85] mb-6 lg:mb-auto"
         >
           Daily Tasks.
         </motion.h2>

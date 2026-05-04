@@ -90,7 +90,7 @@ export default function Index() {
   const Current = slides[index].Comp;
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-black">
+    <div className="relative w-full max-w-[100vw] h-dvh min-h-dvh overflow-hidden bg-black">
       <AnimatePresence mode="wait" custom={dir} initial={false}>
         <motion.div
           key={index}

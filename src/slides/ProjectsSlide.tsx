@@ -14,17 +14,24 @@ const cardAnim = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
 };
 
+const projectLinks = {
+  cycleTech: "https://cycle-tech.shop",
+  xala: "https://xaladesigns.com/",
+  taxPro: "https://taxprotestpilot.netlify.app",
+  jgDesigns: "https://jgdesigns.netlify.app",
+} as const;
+
 export default function ProjectsSlide() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-[#09090b]">
-      <main className="h-full flex flex-col px-8 py-8 lg:px-12 lg:py-10">
+    <div className="relative w-full h-full min-h-0 overflow-hidden overflow-y-auto overscroll-contain bg-[#09090b]">
+      <main className="min-h-full flex flex-col px-4 py-6 sm:px-8 sm:py-8 lg:px-12 lg:py-10 pb-24 sm:pb-10">
 
         {/* Header */}
         <motion.header
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-5 flex items-end justify-between shrink-0"
+          className="mb-4 sm:mb-5 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between shrink-0"
         >
           <div>
             <span className="block text-white/50 font-body text-sm tracking-[0.3em] uppercase mb-2">
@@ -44,18 +51,22 @@ export default function ProjectsSlide() {
           variants={container}
           initial="hidden"
           animate="visible"
-          className="flex-1 min-h-0 grid grid-cols-3 grid-rows-2 gap-4"
+          className="flex-1 min-h-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-3 sm:gap-4 auto-rows-[minmax(160px,1fr)] lg:auto-rows-fr"
           style={{ overflow: "visible" }}
         >
           {/* Card 01 — CycleTech tall left */}
-          <motion.div
+          <motion.a
+            href={projectLinks.cycleTech}
+            target="_blank"
+            rel="noopener noreferrer"
             variants={cardAnim}
             whileHover={{
               scale: 1.04,
               zIndex: 20,
               transition: { type: "spring", stiffness: 260, damping: 22 },
             }}
-            className="feature-card row-span-2 group cursor-default"
+            className="feature-card min-h-[200px] sm:min-h-[220px] lg:min-h-0 sm:col-span-2 lg:col-span-1 lg:row-span-2 group cursor-pointer no-underline text-inherit"
+            aria-label="Open CycleTech live site"
           >
             <img src={cycleTech} alt="CycleTech" className="absolute inset-0 h-full w-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent transition-opacity duration-500 group-hover:opacity-20" />
@@ -68,17 +79,21 @@ export default function ProjectsSlide() {
                 CycleTech
               </h2>
             </div>
-          </motion.div>
+          </motion.a>
 
           {/* Card 02 — Xala wide top right */}
-          <motion.div
+          <motion.a
+            href={projectLinks.xala}
+            target="_blank"
+            rel="noopener noreferrer"
             variants={cardAnim}
             whileHover={{
               scale: 1.04,
               zIndex: 20,
               transition: { type: "spring", stiffness: 260, damping: 22 },
             }}
-            className="feature-card col-span-2 group cursor-default"
+            className="feature-card min-h-[180px] sm:min-h-[200px] lg:min-h-0 sm:col-span-2 lg:col-span-2 group cursor-pointer no-underline text-inherit"
+            aria-label="Open Xala Designs live site"
           >
             <img src={xala} alt="Xala" className="absolute inset-0 h-full w-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent transition-opacity duration-500 group-hover:opacity-20" />
@@ -91,17 +106,21 @@ export default function ProjectsSlide() {
                 Xala
               </h2>
             </div>
-          </motion.div>
+          </motion.a>
 
           {/* Card 03 — TaxPro */}
-          <motion.div
+          <motion.a
+            href={projectLinks.taxPro}
+            target="_blank"
+            rel="noopener noreferrer"
             variants={cardAnim}
             whileHover={{
               scale: 1.04,
               zIndex: 20,
               transition: { type: "spring", stiffness: 260, damping: 22 },
             }}
-            className="feature-card group cursor-default"
+            className="feature-card group cursor-pointer no-underline text-inherit"
+            aria-label="Open TaxPro live site"
           >
             <img src={taxPro} alt="TaxPro" className="absolute inset-0 h-full w-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent transition-opacity duration-500 group-hover:opacity-20" />
@@ -114,17 +133,21 @@ export default function ProjectsSlide() {
                 TaxPro
               </h2>
             </div>
-          </motion.div>
+          </motion.a>
 
           {/* Card 04 — JG Designs */}
-          <motion.div
+          <motion.a
+            href={projectLinks.jgDesigns}
+            target="_blank"
+            rel="noopener noreferrer"
             variants={cardAnim}
             whileHover={{
               scale: 1.04,
               zIndex: 20,
               transition: { type: "spring", stiffness: 260, damping: 22 },
             }}
-            className="feature-card group cursor-default"
+            className="feature-card group cursor-pointer no-underline text-inherit"
+            aria-label="Open JG Designs live site"
           >
             <img src={jgDesigns} alt="JG Designs" className="absolute inset-0 h-full w-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent transition-opacity duration-500 group-hover:opacity-20" />
@@ -137,7 +160,7 @@ export default function ProjectsSlide() {
                 JG Designs
               </h2>
             </div>
-          </motion.div>
+          </motion.a>
         </motion.div>
 
       </main>

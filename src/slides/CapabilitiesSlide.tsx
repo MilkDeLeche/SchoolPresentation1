@@ -10,7 +10,7 @@ const cards = [
 
 export default function CapabilitiesSlide() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-full min-h-0 overflow-hidden overflow-y-auto overscroll-contain bg-black">
       <video
         autoPlay
         loop
@@ -20,7 +20,7 @@ export default function CapabilitiesSlide() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260315_073750_51473149-4350-4920-ae24-c8214286f323.mp4"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      <div className="relative z-10 h-full flex flex-col px-10 lg:px-20 py-12 pb-20">
+      <div className="relative z-10 min-h-full flex flex-col px-4 sm:px-8 lg:px-20 py-8 sm:py-12 pb-24 sm:pb-20">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-auto gap-4">
           <div>
             <motion.span
@@ -49,8 +49,8 @@ export default function CapabilitiesSlide() {
             UI/UX, React, Tailwind CSS, problem solving, and bilingual communication.
           </motion.p>
         </div>
-        <div className="flex-1 flex items-end">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 w-full">
+        <div className="flex-1 flex items-end min-h-0 pt-6 lg:pt-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5 w-full">
             {cards.map((c, i) => (
               <motion.div
                 key={c.title}

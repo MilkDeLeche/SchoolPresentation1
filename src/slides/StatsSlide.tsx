@@ -17,7 +17,7 @@ const items = [
 
 export default function StatsSlide() {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-full min-h-0 overflow-hidden overflow-y-auto overscroll-contain bg-black">
       <video
         autoPlay
         loop
@@ -27,7 +27,7 @@ export default function StatsSlide() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_065931_e3ca7b53-d32e-4ad5-81de-dc9d6fcfda6d.mp4"
       />
       <div className="absolute inset-0 bg-black/20" />
-      <div className="relative z-10 h-full flex flex-col px-10 lg:px-20 py-12 pb-24">
+      <div className="relative z-10 min-h-full flex flex-col px-4 sm:px-8 lg:px-20 py-8 sm:py-12 pb-28 sm:pb-24">
         <div className="mb-auto">
           <motion.span
             initial={{ opacity: 0, x: -15 }}
@@ -55,7 +55,7 @@ export default function StatsSlide() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35 + i * 0.18, duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ x: 6, transition: { type: "spring", stiffness: 300, damping: 28 } }}
-              className="group py-8 lg:py-10 border-t border-white/25 grid grid-cols-1 lg:grid-cols-[200px_1fr_1fr] gap-4 lg:gap-10 items-start cursor-default"
+              className="group py-6 sm:py-8 lg:py-10 border-t border-white/25 grid grid-cols-1 lg:grid-cols-[200px_1fr_1fr] gap-3 sm:gap-4 lg:gap-10 items-start cursor-default"
             >
               <div>
                 <span className="text-white/70 font-body text-base tracking-[0.25em] uppercase block mb-2">
