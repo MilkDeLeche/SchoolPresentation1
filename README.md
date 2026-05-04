@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Miguel Angel Sanchez — Career Presentation
 
-TODO: Document your project here
+Built by **MODO**.
