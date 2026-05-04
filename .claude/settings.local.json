@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm audit *)",
+      "Bash(npm run *)",
+      "Bash(dir F:\\\\SCHOOL\\\\PowerPointCareerPresentation\\\\PowerPoint\\\\src\\\\images *)",
+      "Bash(dir *)",
+      "PowerShell(Get-ChildItem -LiteralPath \"F:\\\\SCHOOL\\\\PowerPointCareerPresentation\\\\PowerPoint\\\\src\\\\images\" -Force | ForEach-Object { Write-Output \"$\\($_.Name\\) | $\\($_.Length\\) bytes\" })",
+      "PowerShell(Copy-Item *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
