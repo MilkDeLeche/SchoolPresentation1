@@ -48,7 +48,7 @@ export default function CtaSlide() {
             </motion.p>
           </div>
 
-          <div className="w-full lg:w-[420px] flex flex-col gap-5 shrink-0">
+          <div className="w-full lg:w-[420px] flex flex-col gap-5 shrink-0 lg:ml-auto">
             {facts.map((f, i) => (
               <motion.div
                 key={f.title}
